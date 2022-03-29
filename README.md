@@ -26,3 +26,24 @@ Your job is to implement the basic application. The purpose of the selected tech
 
 You should spend a maximum of 4 hours on that project. Less would be more ideal.
 We would like you to produce clean code. If you there's lefover time you are welcome to add tests.
+
+## How to get started
+
+Install dependencies
+
+```
+npm install
+```
+
+Prepare and seed database
+
+```
+npx prisma db push
+npx prisma db seed
+```
+
+Start dev server
+
+```
+npm run dev
+```
