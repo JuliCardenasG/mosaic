@@ -1,34 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Mosaic Game
 
-## Getting Started
+## Introduction
 
-First, run the development server:
+The goal of this project is to generate a mosaic of 100x100 tiles which allows participants to change the color of a single tile.
+When multiple participants are concurrently playing the game, the moasic should update when one of the players changes the color of a tile.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Technologies
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## [Next.js](https://nextjs.org/)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Next.js is a react based framework with server side component for data fetching purposes. Next.js support Typescript and the project is setup with typescript.
+The server side component of the application is in the same code base and can be found under pages/api
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## [Prisma](https://www.prisma.io/)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+prisma is a lightwight ORM for typescript. The Serverside component is using prisma with a sqlite database to store the state of the mosaic.
 
-## Learn More
+## [SWR](https://swr.vercel.app/)
 
-To learn more about Next.js, take a look at the following resources:
+SWR is an library which makes fetching data from an API easy.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Summary
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Your job is to implement the basic application. The purpose of the selected technologies and scaffolding is to make the job easier for you. You can use other technologies to implement the solution if think you are faster with a different technology stack. frontend and backend has to be written in typescript and the frontend has to be a react based framework.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+You should spend a maximum of 4 hours on that project. Less would be more ideal.
+We would like you to produce clean code. If you there's lefover time you are welcome to add tests.
