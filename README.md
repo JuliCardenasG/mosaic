@@ -2,8 +2,8 @@
 
 ## Introduction
 
-The goal of this project is to generate a mosaic of 100x100 tiles which allows participants to change the color of a single tile.
-When multiple participants are concurrently playing the game, the moasic should update when one of the players changes the color of a tile.
+The goal of this project is to generate a mosaic of 10x10 tiles which allows participants to change the color of a single tile.
+When multiple participants are concurrently playing the game, the mosaic should update when one of the players changes the color of a tile.
 
 ## Technologies
 
@@ -46,4 +46,10 @@ Start dev server
 
 ```
 npm run dev
+```
+
+reset the database
+
+```
+npx prisma migrate reset
 ```

@@ -3,7 +3,7 @@ import { MosaicTile, PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 async function main() {
-  const mosaicSize = 100;
+  const mosaicSize = 10;
 
   for (let x = 0; x < mosaicSize; x++) {
     for (let y = 0; y < mosaicSize; y++) {
@@ -11,9 +11,7 @@ async function main() {
         data: {
           x,
           y,
-          color: Math.floor(Math.random() * 16777215)
-            .toString(16)
-            .padStart(6, "0"),
+          color: "000000",
         },
       });
     }
