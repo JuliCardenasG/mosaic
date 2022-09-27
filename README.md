@@ -3,7 +3,8 @@
 ## Introduction
 
 The goal of this project is to generate a mosaic of 10x10 tiles which allows participants to change the color of a single tile.
-When multiple participants are concurrently playing the game, the mosaic should update when one of the players changes the color of a tile.
+
+Bonus: When multiple participants are concurrently playing the game, the mosaic should update when one of the players changes the color of a tile.
 
 ## Technologies
 
@@ -24,8 +25,7 @@ SWR is an library which makes fetching data from an API easy.
 
 Your job is to implement the basic application. The purpose of the selected technologies and scaffolding is to make the job easier for you. You can use other technologies to implement the solution if think you are faster with a different technology stack. frontend and backend has to be written in typescript and the frontend has to be a react based framework.
 
-You should spend a maximum of 4 hours on that project. Less would be more ideal.
-We would like you to produce clean code. If you there's lefover time you are welcome to add tests.
+You should spend a maximum of 4 hours on that project. We would like you to produce clean code. If you have time left you are welcome to add tests or go for the bonus (auto-update for multiple participants).
 
 ## How to get started
 
