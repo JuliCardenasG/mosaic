@@ -6,12 +6,14 @@ import useSWR, { Fetcher } from 'swr'
 import { MosaicTile } from '@prisma/client'
 import Mosaic from './mosaic/mosaic'
 
+export const TILES_API_URL = '/api/tiles'
+
 const Home: NextPage = () => {
 
 
   const fetcher: (url: RequestInfo) => Promise<any> = url => fetch(url).then(r => r.json())
 
-  const { data, error } = useSWR<MosaicTile[]>('/api/tiles', fetcher)
+  const { data, error, mutate } = useSWR<MosaicTile[]>(TILES_API_URL, fetcher)
 
 
   if (error) return <div>failed to load</div>
@@ -28,7 +30,7 @@ const Home: NextPage = () => {
           Welcome to the Mosaic Game
         </h1>
 
-        <Mosaic tileData={data} />
+        <Mosaic tileData={data} mutate={mutate}/>
       </main>
 
       <footer className={styles.footer}>
