@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import useSWR, { Fetcher } from 'swr'
 import { MosaicTile } from '@prisma/client'
+import Mosaic from './mosaic/mosaic'
 
 const Home: NextPage = () => {
 
@@ -26,9 +27,8 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>
           Welcome to the Mosaic Game
         </h1>
-        {data.map((tile) => (
-          tile.x, tile.y, tile.color
-        ))}
+
+        <Mosaic tileData={data} />
       </main>
 
       <footer className={styles.footer}>

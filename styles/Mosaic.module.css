@@ -1,0 +1,10 @@
+.mosaic {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+
+.tile {
+  padding: 25px;
+  border: 1px black solid;
+}
