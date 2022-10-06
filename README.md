@@ -1,55 +1,19 @@
 # Mosaic Game
 
-## Introduction
+This is my approach to the case of implementing the mosaic game. It was done in about 4 hours.
 
-The goal of this project is to generate a mosaic of 10x10 tiles which allows participants to change the color of a single tile.
+## Considerations
 
-Bonus: When multiple participants are concurrently playing the game, the mosaic should update when one of the players changes the color of a tile.
+- I did not have previous hands-on experience with Next.js, SWR or Prisma. Of course I had heard about the technologies but never worked with them so I had to read some documentation for doing kind of trivial stuff. That did not block me, but slowed me down a bit as the concepts are pretty much the same as any other libraries that I had previously worked with.
 
-## Technologies
+- I'm not 100% satisfied with the organization of the files and folders. As this was coded in kind of a rush plus the fact that I'd never worked with Next.js I had to follow my previous knowledge of React, which might not be the optimal or canonical way of doing stuff with Next.js. Anyway, I tried to follow Clean Code principles of not making files too big, meaningful names, modules with single responsibility, etc.
 
-## [Next.js](https://nextjs.org/)
+## Potential improvements
 
-Next.js is a react based framework with server side component for data fetching purposes. Next.js support Typescript and the project is setup with typescript.
-The server side component of the application is in the same code base and can be found under pages/api
+- I would have liked to implement at least some simple unit tests for the mosaic page but did not have time to do it. Might do it afterwards if I have some time for my own reference on how to test stuff on Next.
 
-## [Prisma](https://www.prisma.io/)
+- I would have liked to implement the bonus multiplayer mode with Sockets, but again time constraints made it impossible. Might also do it for myself yo work with Sockets.
 
-prisma is a lightwight ORM for typescript. The Serverside component is using prisma with a sqlite database to store the state of the mosaic.
+- Styling is not the best in the world - actually is barely good enough, but that was not high on my priority list.
 
-## [SWR](https://swr.vercel.app/)
-
-SWR is an library which makes fetching data from an API easy.
-
-## Summary
-
-Your job is to implement the basic application. The purpose of the selected technologies and scaffolding is to make the job easier for you. You can use other technologies to implement the solution if think you are faster with a different technology stack. frontend and backend has to be written in typescript and the frontend has to be a react based framework.
-
-You should spend a maximum of 4 hours on that project. We would like you to produce clean code. If you have time left you are welcome to add tests or go for the bonus (auto-update for multiple participants).
-
-## How to get started
-
-Install dependencies
-
-```
-npm install
-```
-
-Prepare and seed database
-
-```
-npx prisma db push
-npx prisma db seed
-```
-
-Start dev server
-
-```
-npm run dev
-```
-
-reset the database
-
-```
-npx prisma migrate reset
-```
+- Tried to deploy the using Vercel but afterwards I found out that it does not support SQLite. A potential improvement could be to move it to some persistent DB system compatible with Vercel and deploy it.
