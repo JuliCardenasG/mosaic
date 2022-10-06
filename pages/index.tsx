@@ -2,23 +2,10 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import useSWR, { Fetcher } from 'swr'
-import { MosaicTile } from '@prisma/client'
-import Mosaic from './mosaic/mosaic'
+import MosaicPage from './mosaic/MosaicPage'
 
-export const TILES_API_URL = '/api/tiles'
 
 const Home: NextPage = () => {
-
-
-  const fetcher: (url: RequestInfo) => Promise<any> = url => fetch(url).then(r => r.json())
-
-  const { data, error, mutate } = useSWR<MosaicTile[]>(TILES_API_URL, fetcher)
-
-
-  if (error) return <div>failed to load</div>
-  if (!data) return <div>loading...</div>
-
   return (
     <div className={styles.container}>
       <Head>
@@ -30,7 +17,7 @@ const Home: NextPage = () => {
           Welcome to the Mosaic Game
         </h1>
 
-        <Mosaic tileData={data} mutate={mutate}/>
+        <MosaicPage />
       </main>
 
       <footer className={styles.footer}>
